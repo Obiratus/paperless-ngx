@@ -472,6 +472,7 @@ class MailAccountHandler(LoggingMixin):
                 name=name,
                 defaults={
                     "match": name,
+                    "matching_algorithm": Correspondent.MATCH_AUTO,
                 },
             )[0]
         except DatabaseError as e:
