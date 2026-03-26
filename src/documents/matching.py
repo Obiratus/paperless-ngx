@@ -376,7 +376,7 @@ def existing_document_matches_workflow(
         )
 
     # Check if any tag filters exist to determine if we need to load document tags
-    trigger_has_tags_qs = trigger.filter_has_tags.all()
+    trigger_has_tags_qs = trigger.filter_has_tags.base_manager.all()
     trigger_has_all_tags_qs = trigger.filter_has_all_tags.all()
     trigger_has_not_tags_qs = trigger.filter_has_not_tags.all()
 
